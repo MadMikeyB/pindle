@@ -1,0 +1,17 @@
+{
+  "name": "pindle",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Daily PIN guessing game",
+  "scripts": {
+    "format": "prettier --write \"*.{html,css,js,md}\"",
+    "minify": "npm run minify:js && npm run minify:css",
+    "minify:js": "terser script.js --compress --mangle --output script.min.js",
+    "minify:css": "lightningcss style.css -o style.min.css --minify"
+  },
+  "devDependencies": {
+    "lightningcss-cli": "^1.30.2",
+    "prettier": "^3.6.2",
+    "terser": "^5.43.1"
+  }
+}
