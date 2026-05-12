@@ -82,3 +82,23 @@ Share output includes:
 - Whether a hint was used
 - Emoji grid (`🟩`, `🟨`, `⬛`)
 - Current page URL
+
+## Deploying to GitHub Pages
+
+This repo includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml`.
+
+Setup steps (one-time):
+
+1. Push this project to a GitHub repo.
+2. In GitHub, open `Settings` -> `Pages`.
+3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
+4. Push to `main` (or run the workflow manually from `Actions`).
+
+Your site will publish to:
+
+- `https://<your-username>.github.io/<repo-name>/`
+
+Notes:
+
+- `.nojekyll` is included so static files are served as-is.
+- If your default branch is not `main`, update the branch in `.github/workflows/deploy-pages.yml`.
